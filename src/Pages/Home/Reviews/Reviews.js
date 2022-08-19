@@ -7,7 +7,7 @@ const Reviews = () => {
             <h2>This is reviews section</h2>
             {datas.map((data, index) => {
                 return (<div key={index}>
-                    <img src={data.image} alt={data.title} />
+                    {/* <img src={data.image} alt={data.title} /> */}
                     <h2>customer: {data.title}</h2>
                     <p>review: {data.desc}</p>
                 </div>)

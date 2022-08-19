@@ -3,7 +3,7 @@ import React from 'react';
 const BusinessSummery = () => {
     return (
         <div>
-            Our Company Business Summery
+            <h2 className="text-2xl">Business Summary</h2>
         </div>
     );
 };
