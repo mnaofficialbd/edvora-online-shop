@@ -6,8 +6,7 @@ const Navbar = () => {
         <li><NavLink to='/' className='text-xl '>Home</NavLink></li>
         <li><NavLink to='/products' className='text-xl '>Products</NavLink></li>
         <li><NavLink to='/dashboard' className='text-xl '>Dashboard</NavLink></li>
-        <li><NavLink to='/myPortfolio' className='text-xl '>My Portfolio</NavLink></li>
-        <li><NavLink to='/blogs' className='text-xl '>Blogs</NavLink></li>
+        <li><NavLink to='/contact' className='text-xl '>Contact</NavLink></li>
         <li>
             <button className='btn btn-NavLink btn-outline  text-decoration-none fs-5'>Sign out</button>
         </li>
