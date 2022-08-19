@@ -9,7 +9,7 @@ const Users = () => {
     }, [])
     return (
         <div>
-            <h2 className='text-xl text-center mb-2 py-2'>Our Users: {users?.length}</h2>
+            <h2 className='text-2xl text-bold text-center mb-2 py-2'>Our Users: {users?.length}</h2>
             <div className="overflow-x-auto w-100">
                 <table className="table mx-auto px-5">
                     <thead>
