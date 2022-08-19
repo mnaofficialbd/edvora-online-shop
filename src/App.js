@@ -7,6 +7,8 @@ import Orders from './Pages/Dashboard/Orders';
 import Users from './Pages/Dashboard/Users';
 import Footer from './Pages/Home/Footer';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 import AllProduct from './Pages/Products/AllProduct';
 
 function App() {
@@ -17,19 +19,13 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<AllProduct />} />
           <Route path='/contact' element={<Contact />} />
-
-           {/* <Route path='purchase/:productId' element={<RequireAuth><PurchaseDetail /></RequireAuth>} /> */}
-          {/* <Route path='orders/:productId' element={<RequireAuth><Purchase /></RequireAuth>} /> */}
-
           <Route path='dashboard' element={<Dashboard />} >
             <Route index element={<DashboardHome /> } />
             <Route path='orders' element={<Orders />} />
             <Route path='users' element={<Users />} />
           </Route>
-          {/* <Route path='login' element={<Login />} /> */}
-          {/* <Route path='register' element={<Register />} />  */}
-
-          {/* <Route path='*' element={<NotFound />} /> */}
+          <Route path='login' element={<Login />} />
+          <Route path='signup' element={<SignUp />} /> 
         </Routes>
 
       <Footer />

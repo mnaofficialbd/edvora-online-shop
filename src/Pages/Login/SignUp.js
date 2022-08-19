@@ -1,8 +1,8 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../Firebase/firebase.init';
 import Loading from '../Shared/Loading';
 
 const SignUp = () => {

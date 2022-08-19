@@ -1,17 +1,28 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../../../Firebase/firebase.init';
+import Loading from '../../Shared/Loading';
 import "./Navber.css"
 
 const Header = () => {
+    // Toogle Menu
+    const [Mobile, setMobile] = useState(false)
+    const [user, loading] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
+    if (loading) {
+        return <Loading />
+    }
 
     // fixed Header
     window.addEventListener("scroll", function () {
         const header = document.querySelector(".header")
         header.classList.toggle_part("active", window.scrollY > 100)
     })
-
-    // Toogle Menu
-    const [Mobile, setMobile] = useState(false)
 
     return (
         <>
@@ -24,18 +35,14 @@ const Header = () => {
                     </div>
 
                     <div className="navlink">
-                        {/* <ul className='link f_flex uppercase'> */}
                         <ul className={Mobile ? "nav-links-mobile" : "link f_flex uppercase"} onClick={() => setMobile(false)}>
                             <li><NavLink to='/' className='text-xl '>Home</NavLink></li>
                             <li><NavLink to='/products' className='text-xl '>Products</NavLink></li>
                             <li><NavLink to='/dashboard' className='text-xl '>Dashboard</NavLink></li>
                             <li><NavLink to='/contact' className='text-xl '>Contact</NavLink></li>
-                            <li>
-                                <button className='btn btn-NavLink btn-outline  text-decoration-none fs-5'>Sign out</button>
-                            </li>
-                            {/* <li>
-                                <NavLink to='/login' className='rounded-lg text-xl '>Login</NavLink>
-                            </li> */}
+                            <li> {
+                                user ? <button onClick={logout} className='btn btn-NavLink btn-outline  text-decoration-none fs-5'>Sign out</button> : <NavLink to='/login' className='rounded-lg text-xl '>Login</NavLink>
+                            } </li>
                         </ul>
 
                         <button className='toggle_part' onClick={() => setMobile(!Mobile)}>

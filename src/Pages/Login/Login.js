@@ -88,7 +88,7 @@ const Login = () => {
                                 {errorElement}
                                 <input className='btn w-full mt-5 max-w-xs text-white' type="submit" value='Login' />
                             </form>
-                            <p className='text-center font-semibold'><small>Are you new ? <Link className='text-blue-500' to='/register'>Create An Account</Link> </small></p>
+                            <p className='text-center font-semibold'><small>Are you new ? <Link className='text-blue-500' to='/signup'>Create An Account</Link> </small></p>
                             <SocialLogin />
                         </div>
                     </div>
