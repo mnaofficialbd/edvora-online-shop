@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navber from '../src/Pages/Home/Navber/Navber';
 import Footer from './Pages/Home/Footer';
 import Home from './Pages/Home/Home';
-import Products from './Pages/Products/Products';
+import AllProduct from './Pages/Products/AllProduct';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navber />
       <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} />
+          <Route path='/products' element={<AllProduct />} />
 
           {/* <Route path='purchase/:productId' element={<RequireAuth><PurchaseDetail /></RequireAuth>} />
           <Route path='orders/:productId' element={<RequireAuth><Purchase /></RequireAuth>} />
