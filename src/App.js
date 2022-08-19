@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Navber from '../src/Pages/Home/Navber/Navber';
+import Contact from './Pages/Contact/Contact';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardHome from './Pages/Dashboard/DashboardHome';
 import Orders from './Pages/Dashboard/Orders';
@@ -15,6 +16,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<AllProduct />} />
+          <Route path='/contact' element={<Contact />} />
 
            {/* <Route path='purchase/:productId' element={<RequireAuth><PurchaseDetail /></RequireAuth>} /> */}
           {/* <Route path='orders/:productId' element={<RequireAuth><Purchase /></RequireAuth>} /> */}

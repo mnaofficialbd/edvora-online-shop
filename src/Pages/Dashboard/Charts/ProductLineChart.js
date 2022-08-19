@@ -5,16 +5,15 @@ import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 const ProductLineChart = () => {
     const [products]=useProducts();
     return (
-        <div className='area-chart'>
-            <h2>Investment VS Revenue</h2>
-            <h2>Month Wise Sell</h2>
-            {<LineChart width={400} height={300} data={products}>
+        <div>
+            {<LineChart width={1000} height={400} data={products}>
                 <Line dataKey={'selling_price'}></Line>
                 <Line dataKey={'stock'}></Line>
                 <XAxis dataKey={'name'}></XAxis>
                 <Tooltip />
                 <YAxis />
             </LineChart>}
+            <h2 className='text-center text-xl'>Stock Wise price</h2>
         </div>
     );
 };
