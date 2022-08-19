@@ -11,7 +11,7 @@ const Product = () => {
 
     return (
         <div className='m-2 p-3'>
-            <h2 className='text-center text-4xl my-3 text-blue-600 font-bold'>Our Products</h2>
+            <h2 className='text-center text-4xl my-3 py-3 text-blue-600 font-bold'>Our Products</h2>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                 {
                     products?.slice(0, 8).map(product => <div key={product.product_id} className="card lg:max-w-lg bg-base-100 shadow-xl">
