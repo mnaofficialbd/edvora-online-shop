@@ -1,0 +1,26 @@
+import React from 'react';
+import useProducts from '../../../hooks/useProducts';
+import { Area, AreaChart, Tooltip, XAxis, YAxis } from 'recharts';
+
+const ProductAreaCharts = () => {
+    const [products]=useProducts();
+    return (
+        <div className='area-chart'>
+            <h2>Investment VS Revenue</h2>
+            {
+                <AreaChart width={400} height={300} data={products}>
+                
+                {/* <XAxis dataKey={"month"}></XAxis> */}
+                <XAxis dataKey={"name"}></XAxis>
+                <Tooltip></Tooltip>
+                <YAxis></YAxis>
+                <Area type="monotone" dataKey={'selling_price'} stackId='1' stroke='#8884d8' fill='#8884d8' />
+                <Area type="monotone" dataKey={'stock'} stackId='1' stroke='#82ca9d' fill='#82ca9d' />
+                <Area type="monotone" dataKey={'stock'} stackId='1' stroke='#ffc658' fill='#ffc658' />
+                </AreaChart>
+            }
+        </div>
+    );
+};
+
+export default ProductAreaCharts;
