@@ -15,8 +15,8 @@ const Product = () => {
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                 {
                     products?.slice(0, 8).map(product => <div key={product.product_id} className="card lg:max-w-lg bg-base-100 shadow-xl">
-                        <div class="avatar justify-center my-2 py-2">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <div className="avatar justify-center my-2 py-2">
+                            <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                 <img src={product?.img} alt={product?.name} className='p-2' />
                             </div>
                         </div>
